@@ -22,8 +22,8 @@ io.on('connection', socket => {
     console.log('Server connection established with: ', socket.id);
 
     //broadcast to all other clients
-    socket.on('data', data => {
-        io.sockets.emit('data', data);
+    socket.on('chat', data => {
+        io.sockets.emit('chat', data);
     })
 });
 
